@@ -5,7 +5,6 @@ function tentukanDeretGeometri(arr) {
       var multiplier = arr[index+1] / arr[index]
       while(index < arr.length-1 && checker){
           index++;
-          console.log(index + " " + arr[index])
           if(arr[index]/arr[index-1] !== multiplier){
               checker = false;
           }

@@ -1,7 +1,8 @@
 function dataHandling2(input){
-    input.splice(1,2,"Roman Alamsyah Elsharawy", "Provinsi Bandar Lampung");
-    input.splice(4,1,"Pria", "SMA Internasional");
-    var tanggalLahir = input[3].split("/");
+    var newInput = input.splice(0);
+    newInput.splice(1,2,"Roman Alamsyah Elsharawy", "Provinsi Bandar Lampung");
+    newInput.splice(4,1,"Pria", "SMA Internasional");
+    var tanggalLahir = newInput[3].split("/");
     var bulan = "";
     console.log(tanggalLahir[1]);
     switch (tanggalLahir[1]){
@@ -44,15 +45,15 @@ function dataHandling2(input){
         default:
 		    break
     }
-    console.log(input);
+    console.log(newInput);
     console.log(bulan);
     var tanggalLahirGabung = tanggalLahir.join("-");
     var tanggalLahirSorting = tanggalLahir.sort(function(a, b){return b-a});
     console.log(tanggalLahirSorting);
     console.log("");
     console.log(tanggalLahirGabung);
-    if( typeof input[1] === "string"){
-        console.log(input[1].slice(0,14));
+    if( typeof newInput[1] === "string"){
+        console.log(newInput[1].slice(0,14));
     } 
 }
 
