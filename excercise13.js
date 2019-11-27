@@ -6,22 +6,17 @@ function targetTerdekat(arr) {
         var tempCounter = 0;
         var checker = false;
         if(arr[i] === "o" || arr[i]=== "x"){
-            for(var j = i+1; j < arr.length; j++){
+            for(var j = i+1; j < arr.length && !checker; j++){
                 if(arr[j] === " "){
                     tempCounter+=1;
                 }
                 else if((arr[j] === "x" && arr[i]=== "o")||(arr[i]==="x" && arr[j] === "o")){
                     tempCounter+=1;
                     checker = true;
-                    break;
-                }
-                else if((arr[j] === "x" && arr[i]=== "x")||(arr[i]==="o" && arr[j] === "o")){
-                    tempCounter = 0;
-                    break;
                 }
             }
         }
-        if((counter === 0 & checker)|| (counter!== 0 && counter > tempCounter && checker)){
+        if((counter === 0 & checker)|| (counter > tempCounter && checker)){
             counter = tempCounter;
         }
     }
@@ -34,3 +29,6 @@ function targetTerdekat(arr) {
     console.log(targetTerdekat(['x', ' ', ' ', ' ', 'x', 'x', 'o', ' '])); // 1
     console.log(targetTerdekat([' ', ' ', 'o', ' '])); // 0
     console.log(targetTerdekat([' ', 'o', ' ', 'x', 'x', ' ', ' ', 'x'])); // 2|
+
+
+    
