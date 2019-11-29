@@ -4,7 +4,6 @@ function dataHandling2(input){
     newInput.splice(4,1,"Pria", "SMA Internasional");
     var tanggalLahir = newInput[3].split("/");
     var bulan = "";
-    console.log(tanggalLahir[1]);
     switch (tanggalLahir[1]){
         case '01':
     	    bulan = "Januari";
