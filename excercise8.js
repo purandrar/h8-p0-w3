@@ -6,6 +6,7 @@ function pasanganTerbesar(num) {
     var puluhan = num%10;
     var angka = puluhan*10+satuan;
     num = (num-puluhan)/10;
+    container.push(angka);
     while(num > 0){
       satuan = puluhan;
       if(num > 1){
